@@ -64,13 +64,11 @@ table {
 /* end of reset styles  */
 
 
-
 body {
 	font-size: 1em;
 	font-family: 'Roboto Slab', serif;
 	background: white;
 }
-
 header {
 	background: url(../images/flowers.jpg) no-repeat center top / cover;
 	color: white;
@@ -99,6 +97,7 @@ header {
 .logo {
 	display: inline;
 	padding: 30px 10px;
+	position: absolute;
 }
 .nav {
 	float: right;
@@ -125,46 +124,10 @@ header {
 .nav a:hover {
 	border-bottom: 1px solid white;
 }
-/*
-.logo {
-	margin: 30px 30px 30px 0;
-	padding: 30px;
-	display: inline-block;
-}
-.nav {
-	display: inline-block;
-	position: absolute;
-	top: 30px;
-	right: 50px;
-}
-.nav li {
-	display: inline;
-}
-.nav li:last-child {
-	margin-right: 0;
-}
-.nav a {
-	display: inline-block;
-	padding: 20px 0 0 0;
-  margin: 10px 10px 20px 10px;
-	text-decoration: none;
-	color: white;
-	border-bottom: 1px solid transparent;
-	transition: border-bottom 0.5s ease;
-}
-.nav a:active {
-	color: rgb(155,89,182);
-}
-.nav a:hover {
-	border-bottom: 1px solid white;
-}
-
-*/
-
 /*_________________________________________MAIN_TEXT__________________________________________*/
 .main-text {
 	max-width: 60%;
-	margin: 50px auto;
+	margin: 54px auto;
 }
 .main-text h1, .main-text h2 {
 	text-align: center;
@@ -200,12 +163,6 @@ a.button {
 a.button:hover {
 	transform: scale(1.2);
 }
-/*
-div.wrapper {
-	width: 80%;
-	margin: 0 auto;
-}
-*/
 /*_________________________________section author______________________________________*/
 section.author {
 	width: 60%;
@@ -302,7 +259,6 @@ figure:hover figcaption {
 }
 */
 figcaption {
-	top: 75%;
 	background: rgb(155,89,182);
 	padding: 10px;
 	font-weight: 400;
@@ -368,7 +324,7 @@ textarea {
 	margin: 20px 0;
 }
 
-/*________________________placeholders styles______________________*/
+/*_____________________________placeholders styles__________________________*/
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder           {opacity: 1; transition: opacity 0.3s ease; color: #d0d1d3;}
 input::-moz-placeholder, textarea::-moz-placeholder               			    {opacity: 1; transition: opacity 0.3s ease; color: #d0d1d3;}
@@ -397,20 +353,13 @@ footer {
 }
 .social-icons li {
 	display: inline;
-	position: absolute;
 	height: 60px;
 }
 .social-icons li:first-child {
-	top: 0;
-	left: 0;
-}
-.social-icons li:nth-child(2) {
-	top: 0;
-	left: 45%;
+	float: left;
 }
 .social-icons li:nth-child(3) {
-	top: 0;
-	right: 0;
+	float: right;
 }
 .social-icons a {
 	display: inline-block;
@@ -428,18 +377,14 @@ a.facebook {
 	background: url(../images/social.png) no-repeat -111px 0;
 }
 footer div {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
 	width: 80%;
 	margin: 0 auto;
-	padding-bottom: 30px;
+	padding-top: 30px;
 }
 footer div p {
 	display: inline-block;
 	color: white;
-	width: 30%;
+	width: 50%;
 }
 p.copyright {
 	float: left;
@@ -458,131 +403,51 @@ p.imprint {
 
 /*__________________________________MEDIA______________________________________*/
 
-
-@media screen and (max-width: 480px), (max-device-width: 480px) {
-	.effect { 
-		height: 300px;
-	}
-	.top-nav {
-		padding-top: 15px;
-	}
-	.logo {
-		padding: 15px 20px 20px 20px;
-		position: absolute;
-	}
-	.nav {
-		position: absolute;
-		width: 70%;
-		right: 0;
-		top: 20px;
-	}
-	.nav li {
-		display: none;
-		width: 80%;
-		z-index: 10;
-	}
-	.nav .current  {
-		display: block;
-	}
-	.nav a {
-		display: block;
-		text-align: center;
-		margin: 0;
-		color: rgb(155,89,182);
-		padding: 10px 0px;
-		background: rgba(255,255,255,.7);
-	}
-	.nav a:hover {
-		background: rgb(255,255,255);
+@media screen and (max-width: 840px) {
 	
-	}
-	.nav:hover li,
-	.nav:focus li {
-		display: block;
-	}
-
-
-
-
-	.main-text {
-	max-width: 90%;
-	margin: 50px auto 10px; 
-	}
-	.main-text h1 {
-	font-size: 1.9em;
+	section.author {
+		width: 80%;
 	}
 	.column {
-	width: 100%;
-	display: inline;
+		width: 100%;
+		display: inline;
 	}
-	.column p {
-	line-height: 1.2;
+	.column img, .column h3 {
+		display: inline-block;
+	}
+	.column img {
+		width: 40px;
+		height: 40px;
+		position: relative;
+    top: 10px;
+    margin-right: 3px;
 	}
 	.column:last-child {
-	margin-right: 0;
-	}
-	.top-nav, section.gallery, section.author, section.about-author, section.form {
-		width: 90%;
-	}
-	figure {
-	display: inline;
-	}
-	figure:last-child {
-		padding-bottom: 0;
-	}
-	.photo {
-		margin-bottom: 30px;
-	}
-	.photo:last-child {
-		margin-bottom: 0;
-	}
-	.cover {
-		visibility: hidden;
+		margin-right: 0;
 	}
 	input {
-	width: 100%;
-	display: inline-block;
-	margin-bottom: 20px;
+		width: 100%;
+		display: inline-block;
+		margin-bottom: 20px;
 	}
 	input:first-child {
-	margin-right: 0;
+		margin-right: 0;
 	}
 	textarea {
 		margin-top: 0;
-	}
-
-
-@media screen and (max-width: 840px) {
-	section.author {
-    width: 80%;
-  }
-	.column p {
-		font-size: 0.9em;
-	}
-	section.form {
-		width: 80%;
 	}
 }
 
 @media screen and (max-width: 779px) {
-	.main-text h1 {
-	
-	padding-bottom: 20px;
-	}
-.main-text h2 {
-	font-size: 1.2em;
-	padding-top: 20px;
+	.main-text {
+		max-width: 80%;
 	}
 }
 
-/*______________________________MEDIA FOR DEVICES______________________________*/
-/*
-@media screen and (max-device-width: 768px) {
-
-}
-
-
-@media screen and (max-device-width: 480px) {
+@media screen and (max-width: 636px), (max-device-width: 480px) {
+	.effect { 
+		height: 292px;
+	}
 	.top-nav {
 		padding-top: 15px;
 	}
@@ -614,59 +479,60 @@ p.imprint {
 	}
 	.nav a:hover {
 		background: rgb(255,255,255);
-	
 	}
 	.nav:hover li,
 	.nav:focus li {
 		display: block;
 	}
-
-
-
-
-
-
-
 	.main-text {
-		max-width: 90%; }
-	.column {
-	width: 100%;
-	display: inline;
+		max-width: 90%;
+		margin: 50px auto 10px; 
+	}
+	.main-text h1 {
+		font-size: 2em;
+	}
+	section.author {
+		margin-bottom: 0;
+	}
+	section.author h1 {
+		padding: 0 0 10px 0;
+	}
+	section.author p, section.about-author p {
+		line-height: 1.4;
+    font-size: 1em;
+    text-align: justify;
 	}
 	.column p {
-	line-height: 1.2;
-	}
-	.column:last-child {
-	margin-right: 0;
+		line-height: 1.2;
 	}
 	.top-nav, section.gallery, section.author, section.about-author, section.form {
 		width: 90%;
 	}
+
 	figure {
-	display: inline;
-	}
-	figure:last-child {
-		padding-bottom: 0;
-	}
-	.photo {
+		width: 100%;
 		margin-bottom: 30px;
 	}
-	.photo:last-child {
-		margin-bottom: 0;
+	figure:nth-child(n+3) {
+    margin-top: 0px;
+    margin-bottom: 0px;
+	}
+	figure:nth-child(3) {
+		margin-bottom: 30px;
 	}
 	.cover {
 		visibility: hidden;
 	}
-	input {
-	width: 100%;
-	display: inline-block;
-	margin-bottom: 20px;
+	a.more-but {
+		margin-top: 15px;
 	}
-	input:first-child {
-	margin-right: 0;
+	.social-icons {
+		width: 90%;
 	}
-	textarea {
-		margin-top: 0;
-	}
+}
 
-*/
+@media screen and (max-width: 320px), (max-device-width: 320px) {
+	.main-text h2 {
+		font-size: 1.1em;
+	}
+}
