@@ -40,7 +40,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 1em;
 	vertical-align: baseline;
 }
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -87,7 +87,9 @@ header {
 	font-weight: 300;
 	font-size: 1.2em;
 	margin: 0 auto;
+	padding: 30px 0;
 	text-transform: uppercase;
+	position: relative;
 }
 .clearfix:after {
 	content: "";
@@ -95,11 +97,10 @@ header {
 	clear: both;
 }
 .logo {
-	float: left;
 	display: inline;
-	padding: 30px;
+	padding: 30px 10px;
 }
-.nav, .menu {
+.nav {
 	float: right;
 }
 .nav li {
@@ -108,8 +109,8 @@ header {
 }
 .nav a, .menu {
 	display: inline-block;
-	padding: 20px 0 0 0;
-  margin: 10px 10px 20px 10px;
+	padding: 20px 10px 0 10px;
+    margin: 10px 0px 20px 0px;
 	text-decoration: none;
 	color: white;
 	border-bottom: 1px solid transparent;
@@ -457,54 +458,59 @@ p.imprint {
 
 /*__________________________________MEDIA______________________________________*/
 
-@media screen and (max-width: 840px) {
-	section.author {
-    width: 80%;
-  }
-	.column p {
-		font-size: 0.9em;
+
+@media screen and (max-width: 480px), (max-device-width: 480px) {
+	.effect { 
+		height: 300px;
 	}
-	section.form {
-		width: 80%;
+	.top-nav {
+		padding-top: 15px;
 	}
-}
-
-@media screen and (max-width: 779px) {
-	.main-text h1 {
-	font-size: 2.3em;
-	padding-bottom: 20px;
-	}
-.main-text h2 {
-	font-size: 1.2em;
-	padding-top: 20px;
-	}
-}
-
-
-@media screen and (max-device-width: 768px) {
-
-}
-
-
-@media screen and (max-device-width: 480px) {
-	.menu {
-		display: inline-block;
+	.logo {
+		padding: 15px 20px 20px 20px;
+		position: absolute;
 	}
 	.nav {
-		display: none;
+		position: absolute;
+		width: 70%;
+		right: 0;
+		top: 20px;
 	}
-	.menu:hover .nav,
-	.menu:focus .nav {
-		display: inline-block;
+	.nav li {
+		display: none;
+		width: 80%;
+		z-index: 10;
+	}
+	.nav .current  {
+		display: block;
+	}
+	.nav a {
+		display: block;
+		text-align: center;
+		margin: 0;
+		color: rgb(155,89,182);
+		padding: 10px 0px;
+		background: rgba(255,255,255,.7);
+	}
+	.nav a:hover {
+		background: rgb(255,255,255);
+	
+	}
+	.nav:hover li,
+	.nav:focus li {
+		display: block;
 	}
 
+
+
+
 	.main-text {
-		max-width: 90%; }
-		/*
-		margin: 20px auto;
-		font-size: 1.3em;
+	max-width: 90%;
+	margin: 50px auto 10px; 
 	}
-	*/
+	.main-text h1 {
+	font-size: 1.9em;
+	}
 	.column {
 	width: 100%;
 	display: inline;
@@ -546,19 +552,121 @@ p.imprint {
 	}
 
 
-
-
-	/*
-	section.author p {
-	line-height: 1.2;
-	font-size: .8em;
+@media screen and (max-width: 840px) {
+	section.author {
+    width: 80%;
+  }
+	.column p {
+		font-size: 0.9em;
 	}
+	section.form {
+		width: 80%;
+	}
+}
+
+@media screen and (max-width: 779px) {
+	.main-text h1 {
 	
-	a.button {
-		font-size: 1.5em;
-		padding: 20px 50px;
-		height: auto;
+	padding-bottom: 20px;
 	}
+.main-text h2 {
+	font-size: 1.2em;
+	padding-top: 20px;
+	}
+}
+
+/*______________________________MEDIA FOR DEVICES______________________________*/
+/*
+@media screen and (max-device-width: 768px) {
 
 }
+
+
+@media screen and (max-device-width: 480px) {
+	.top-nav {
+		padding-top: 15px;
+	}
+	.logo {
+		padding: 15px 20px 20px 20px;
+		position: absolute;
+	}
+	.nav {
+		position: absolute;
+		width: 70%;
+		right: 0;
+		top: 20px;
+	}
+	.nav li {
+		display: none;
+		width: 80%;
+		z-index: 10;
+	}
+	.nav .current  {
+		display: block;
+	}
+	.nav a {
+		display: block;
+		text-align: center;
+		margin: 0;
+		color: rgb(155,89,182);
+		padding: 10px 0px;
+		background: rgba(255,255,255,.7);
+	}
+	.nav a:hover {
+		background: rgb(255,255,255);
+	
+	}
+	.nav:hover li,
+	.nav:focus li {
+		display: block;
+	}
+
+
+
+
+
+
+
+	.main-text {
+		max-width: 90%; }
+	.column {
+	width: 100%;
+	display: inline;
+	}
+	.column p {
+	line-height: 1.2;
+	}
+	.column:last-child {
+	margin-right: 0;
+	}
+	.top-nav, section.gallery, section.author, section.about-author, section.form {
+		width: 90%;
+	}
+	figure {
+	display: inline;
+	}
+	figure:last-child {
+		padding-bottom: 0;
+	}
+	.photo {
+		margin-bottom: 30px;
+	}
+	.photo:last-child {
+		margin-bottom: 0;
+	}
+	.cover {
+		visibility: hidden;
+	}
+	input {
+	width: 100%;
+	display: inline-block;
+	margin-bottom: 20px;
+	}
+	input:first-child {
+	margin-right: 0;
+	}
+	textarea {
+		margin-top: 0;
+	}
+
 */
