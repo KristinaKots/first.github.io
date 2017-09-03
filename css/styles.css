@@ -80,6 +80,10 @@ header {
 	height: 402px;
 	content: " ";
 }
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+}
 /*________________________________________NAVIGATION______________________________________*/
 .top-nav {
 	width: 80%;
@@ -146,7 +150,6 @@ header {
 }
 .container-but {
 	text-align: center;
-	padding-top: 22px;
 }
 a.button {
 	font-family: Helvetica, Arial, sans-serif;
@@ -167,7 +170,8 @@ a.button:hover {
 /*_________________________________section author______________________________________*/
 section.author {
 	width: 60%;
-	margin: 40px auto;
+	margin: 30px auto;
+	margin-top: -22px;
 	text-align: center;
 }
 section.author h1 {
@@ -175,7 +179,7 @@ section.author h1 {
 	font-size: 1.5em;
 	text-transform: uppercase;
 	color: rgb(155,89,182);
-	padding: 20px 0;
+	padding: 40px 0 20px;
 }
 section.author p {
 	color: rgb(149,165,166);
@@ -278,6 +282,9 @@ figcaption  p {
 	font-family: Helvetica, Arial, sans-serif;
 	padding-top: 5px;
 }
+.gallery .container-but {
+	padding-top: 22px;
+}
 a.more-but {
 	background: rgb(155,89,182) url(../images/left.png) no-repeat 83% center;
 	background-size: 22px auto;
@@ -371,18 +378,18 @@ footer {
 a.twitter {
 	background: url(../images/social.png) no-repeat;
 }
-a.hz {
+a.dribbble {
 	background: url(../images/social.png) no-repeat -57px 0;
 }
 a.facebook {
 	background: url(../images/social.png) no-repeat -111px 0;
 }
-footer div {
+footer .container-copyright {
 	width: 80%;
 	margin: 0 auto;
 	padding-top: 30px;
 }
-footer div p {
+footer .container-copyright p {
 	display: inline-block;
 	color: white;
 	width: 50%;
@@ -488,16 +495,19 @@ p.imprint {
 	}
 	.main-text {
 		max-width: 90%;
-		margin: 50px auto 10px; 
+		margin: 70px auto 30px;
 	}
 	.main-text h1 {
 		font-size: 2em;
+	}
+	.main-text h2 {
+		font-size: 1.2em;
 	}
 	section.author {
 		margin-bottom: 0;
 	}
 	section.author h1 {
-		padding: 0 0 10px 0;
+		padding: 15px 0 10px 0;
 	}
 	section.author p, section.about-author p {
 		line-height: 1.4;
@@ -522,9 +532,11 @@ p.imprint {
 	figure:nth-child(3) {
 		margin-bottom: 30px;
 	}
+	/*
 	.cover {
 		visibility: hidden;
 	}
+	*/
 	a.more-but {
 		margin-top: 15px;
 	}
@@ -533,8 +545,21 @@ p.imprint {
 	}
 }
 
+@media screen and (max-width: 422px) {
+.main-text {
+    margin: 50px auto 15px;
+  }
+}
 @media screen and (max-width: 320px), (max-device-width: 320px) {
 	.main-text h2 {
-		font-size: 1.1em;
+		font-size: 1em;
+	}
+}
+@media screen and (max-width: 292px) {
+	.main-text h1 {
+		font-size: 1.6em;
+	}
+	.main-text h2 {
+		font-size: 1em;
 	}
 }

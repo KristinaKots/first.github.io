@@ -5,106 +5,114 @@
 <title>Test page</title>
 <link href="css/styles.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
+<link rel="shortcut icon" href="">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">  
 </head>
 <body>
 	<header id="start">
 		<div class="effect">
-		<div class="top-nav clearfix">
-			<div class="logo">Logo
+			<div class="wrapper">	
+				<div class="top-nav clearfix">
+					<div class="logo">Logo
+					</div>
+					<ul class="nav">
+						<li class="current"><a href="#start">Start</a></li>
+						<li><a href="#author">About me</a></li>
+						<li><a href="#gallery">Work</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</div>
+				<div class="main-text">
+					<h1>May I introduce myself?</h1>
+					<h2>Frontend Design | UI/UX design</h2>
+				</div>
+	
 			</div>
-			<ul class="nav">
-				<li class="current"><a href="#start">Start</a></li>
-				<li><a href="#author">About me</a></li>
-				<li><a href="#gallery">Work</a></li>
-				<li><a href="#contact">Contact</a></li>
-			</ul>
-		</div>
-		<div class="main-text">
-			<h1>May I introduce myself?</h1>
-			<h2>Frontend Design | UI/UX design</h2>
-		</div>
-		<div class="container-but">
-			<a href="#author" class="button">Go ahead</a>
-		</div>
 		</div>
 	</header>
-	<section class="author" id="author">
-	<h1>Raphael Lechner.</h1>
-	<p>Lorem ipsum dolor sit amet, sea ad deseruisse instructior. Unum aliquando ex nam, saperet utroque ex pro. Has ex errem congue, mucius laoreet ne vix. Sed ex vitae facete efficiantur, postea inciderint qui no. Everti inermis mea te, in nulla eripuit appellantur duo. Et nam modus reprehendunt.</p>
-	</section> 
-	<section class="about-author clearfix">
-		<div class="column">
-			<img class="icon1" src="images/icon1.png" alt="icon">
-			<h3>Sketching is fun</h3>
-			<p>Errem detracto referrentur ad est, vel eripuit sapientem intellegat eu. Ne nostro omittam mei, te eum malorum reprehendunt. Ea erat simul mea, essent percipit mei ex. An sea novum saepe, mel id tota dignissim.</p>
-		</div>
-		<div class="column">
-			<img class="icon2" src="images/icon2.png" alt="icon">
-			<h3>Design afterwards</h3>
-			<p>Errem detracto referrentur ad est, vel eripuit sapientem intellegat eu. Ne nostro omittam mei, te eum malorum reprehendunt. Ea erat simul mea, essent percipit mei ex. An sea novum saepe, mel id tota dignissim.</p>
-		</div>
-		<div class="column">
-			<img class="icon3" src="images/icon3.png" alt="icon">
-			<h3>Finalize</h3>
-			<p>Errem detracto referrentur ad est, vel eripuit sapientem intellegat eu. Ne nostro omittam mei, te eum malorum reprehendunt. Ea erat simul mea, essent percipit mei ex. An sea novum saepe, mel id tota dignissim.</p>
-		</div>		
-	</section>
-	<section class="gallery" id="gallery">
-		<figure>
-			<img class="photo" src="images/gallery1.jpg" alt="">
-			<div class="cover"></div>
-			<figcaption>
-				<h3>Lorem ipsum dolor sit</h3>
-				<p>Amet sea ad deseruisse instructior.</p>
-			</figcaption>
-		</figure>
-		<figure>
-			<img class="photo" src="images/gallery2.jpg" alt="">
-			<div class="cover"></div>
-			<figcaption>
-				<h3>Lorem ipsum dolor sit</h3>
-				<p>Amet sea ad deseruisse instructior.</p>
-			</figcaption>
-		</figure>
-		<figure>
-			<img class="photo" src="images/gallery3.jpg" alt="">
-			<div class="cover"></div>
-			<figcaption>
-				<h3>Lorem ipsum dolor sit</h3>
-				<p>Amet sea ad deseruisse instructior.</p>
-			</figcaption>
-		</figure>
-		<figure>
-			<img class="photo" src="images/gallery4.jpg" alt="">
-			<div class="cover"></div>
-			<figcaption>
-				<h3>Lorem ipsum dolor sit</h3>
-				<p>Amet sea ad deseruisse instructior.</p>
-			</figcaption>
-		</figure>
-		<div class="container-but">
-			<a href="gallery.html" class="button more-but">Veiw more</a>
-		</div>
-	</section>
-	<section class="form">
-		<h1>Get it touch!</h1>
-		<form action="" method="post">
-		<input type="text" name="name" placeholder="Name">
-		<input type="text" name="email" placeholder="Email"><br>
-		<textarea rows="9" placeholder="How can I help you?"></textarea>
-		</form>
-	</section>
+	<div class="wrapper">
+		<section class="author" id="author">
+				<div class="container-but">
+					<a href="#author" class="button">Go ahead</a>
+				</div>
+		<h1>Raphael Lechner.</h1>
+		<p>Lorem ipsum dolor sit amet, sea ad deseruisse instructior. Unum aliquando ex nam, saperet utroque ex pro. Has ex errem congue, mucius laoreet ne vix. Sed ex vitae facete efficiantur, postea inciderint qui no. Everti inermis mea te, in nulla eripuit appellantur duo. Et nam modus reprehendunt.</p>
+		</section> 
+		<section class="about-author clearfix">
+			<div class="column">
+				<img class="icon1" src="images/icon1.png" alt="icon">
+				<h3>Sketching is fun</h3>
+				<p>Errem detracto referrentur ad est, vel eripuit sapientem intellegat eu. Ne nostro omittam mei, te eum malorum reprehendunt. Ea erat simul mea, essent percipit mei ex. An sea novum saepe, mel id tota dignissim.</p>
+			</div>
+			<div class="column">
+				<img class="icon2" src="images/icon2.png" alt="icon">
+				<h3>Design afterwards</h3>
+				<p>Errem detracto referrentur ad est, vel eripuit sapientem intellegat eu. Ne nostro omittam mei, te eum malorum reprehendunt. Ea erat simul mea, essent percipit mei ex. An sea novum saepe, mel id tota dignissim.</p>
+			</div>
+			<div class="column">
+				<img class="icon3" src="images/icon3.png" alt="icon">
+				<h3>Finalize</h3>
+				<p>Errem detracto referrentur ad est, vel eripuit sapientem intellegat eu. Ne nostro omittam mei, te eum malorum reprehendunt. Ea erat simul mea, essent percipit mei ex. An sea novum saepe, mel id tota dignissim.</p>
+			</div>		
+		</section>
+		<section class="gallery" id="gallery">
+			<figure>
+				<img class="photo" src="images/gallery1.jpg" alt="">
+				<div class="cover"></div>
+				<figcaption>
+					<h3>Lorem ipsum dolor sit</h3>
+					<p>Amet sea ad deseruisse instructior.</p>
+				</figcaption>
+			</figure>
+			<figure>
+				<img class="photo" src="images/gallery2.jpg" alt="">
+				<div class="cover"></div>
+				<figcaption>
+					<h3>Lorem ipsum dolor sit</h3>
+					<p>Amet sea ad deseruisse instructior.</p>
+				</figcaption>
+			</figure>
+			<figure>
+				<img class="photo" src="images/gallery3.jpg" alt="">
+				<div class="cover"></div>
+				<figcaption>
+					<h3>Lorem ipsum dolor sit</h3>
+					<p>Amet sea ad deseruisse instructior.</p>
+				</figcaption>
+			</figure>
+			<figure>
+				<img class="photo" src="images/gallery4.jpg" alt="">
+				<div class="cover"></div>
+				<figcaption>
+					<h3>Lorem ipsum dolor sit</h3>
+					<p>Amet sea ad deseruisse instructior.</p>
+				</figcaption>
+			</figure>
+			<div class="container-but">
+				<a href="gallery.html" class="button more-but">Veiw more</a>
+			</div>
+		</section>
+		<section class="form">
+			<h1>Get it touch!</h1>
+			<form action="" method="post">
+			<input type="text" name="name" placeholder="Name">
+			<input type="text" name="email" placeholder="Email"><br>
+			<textarea rows="9" placeholder="How can I help you?"></textarea>
+			</form>
+		</section>
+	</div>	
 	<footer id="contact">
-		<ul class="social-icons clearfix">
-			<li><a href="#" class="twitter"></a></li>
-			<li><a href="#" class="hz"></a></li>
-			<li><a href="#" class="facebook"></a></li>
-		</ul>
-		<div class="container-copyright clearfix">
-		<p class="copyright">&#169; Raphael Lechner</p>
-		<p class="imprint">Imprint</p>
-		</div>
+		<div class="wrapper">
+			<ul class="social-icons clearfix">
+				<li><a href="#" class="twitter"></a></li>
+				<li><a href="#" class="dribbble"></a></li>
+				<li><a href="#" class="facebook"></a></li>
+			</ul>
+			<div class="container-copyright clearfix">
+			<p class="copyright">&#169; Raphael Lechner</p>
+			<p class="imprint">Imprint</p>
+			</div>
+		</div>	
 	</footer>
 </body>
 </html>
